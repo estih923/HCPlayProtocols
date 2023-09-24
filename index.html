@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroclix AI Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Heroclix AI Simulator</h1>
+    </header>
+    <main>
+        <section id="team-setup">
+            <h2>Team Setup</h2>
+            <label for="strategy-select">Select Team Strategy:</label>
+            <select id="strategy-select">
+                <option value="offensive">Offensive</option>
+                <option value="balanced">Balanced</option>
+                <option value="defensive">Defensive</option>
+            </select>
+            <label for="num-ai-pieces">Number of AI Team Pieces:</label>
+            <input type="number" id="num-ai-pieces">
+            <div id="piece-inputs">
+                <!-- Dynamic piece input fields will be added here -->
+            </div>
+            <button id="generate-ai-team">Generate AI Team</button>
+        </section>
+        <section id="game-simulation">
+            <!-- The game simulation and AI decision-making interface will be displayed here -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
