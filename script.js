@@ -22,10 +22,10 @@ function simulateAIBehavior(strategy, aiTeam) {
     // Example: { piece1: "Move aggressively", piece2: "Defend", ... }
 }
 
-// Event listener for when the user clicks the "Generate AI" button
-document.getElementById("generate-ai").addEventListener("click", function () {
-    const strategy = document.getElementById("strategy").value;
-    const aiTeamSize = parseInt(document.getElementById("ai-team-size").value, 10);
+// Event listener for when the user clicks the "Generate AI Team" button
+document.getElementById("generate-ai-team").addEventListener("click", function () {
+    const strategy = document.getElementById("strategy-select").value;
+    const aiTeamSize = parseInt(document.getElementById("num-ai-pieces").value, 10);
     const aiTeam = generateAIPieces(aiTeamSize);
 
     // Simulate AI behavior based on strategy and aiTeam
