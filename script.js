@@ -16,10 +16,20 @@ function generateAIPieces(aiTeamSize) {
 
 // Function to simulate AI behavior based on strategy and temperament
 function simulateAIBehavior(strategy, aiTeam) {
-    // Add your AI behavior simulation logic here
-    // Consider strategy, temperament, and other game factors
-    // Return an object representing AI behavior
-    // Example: { piece1: "Move aggressively", piece2: "Defend", ... }
+    const aiBehavior = {};
+
+    // Example simulation logic - replace with your own
+    aiTeam.forEach((piece, index) => {
+        if (strategy === "offensive") {
+            aiBehavior[`piece${index + 1}`] = `${piece.name} - Move aggressively`;
+        } else if (strategy === "defensive") {
+            aiBehavior[`piece${index + 1}`] = `${piece.name} - Defend`;
+        } else if (strategy === "balanced") {
+            aiBehavior[`piece${index + 1}`] = `${piece.name} - Take balanced action`;
+        }
+    });
+
+    return aiBehavior;
 }
 
 // Event listener for when the user clicks the "Generate AI Team" button
@@ -35,3 +45,4 @@ document.getElementById("generate-ai-team").addEventListener("click", function (
     const aiBehaviorElement = document.getElementById("ai-behavior");
     aiBehaviorElement.innerHTML = `<h2>AI Behavior:</h2><pre>${JSON.stringify(aiBehavior, null, 2)}</pre>`;
 });
+
