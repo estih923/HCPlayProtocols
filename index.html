@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heroclix AI Simulator</title>
+    <title>HeroClix AI Simulation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Heroclix AI Simulator</h1>
+        <h1>HeroClix AI Simulation</h1>
     </header>
-    <main>
-        <section id="team-setup">
-            <h2>Team Setup</h2>
+    <div class="container">
+        <div class="user-input">
+            <label for="team-tactic">Select Team Tactic:</label>
+            <select id="team-tactic">
+                <option value="offensive">Offensive</option>
+                <option value="balanced">Balanced</option>
+                <option value="defensive">Defensive</option>
+            </select>
+            <button id="select-tactic-btn">Select Tactic</button>
 
-            <div class="strategy-options">
-                <button id="offensive-btn" class="strategy-btn">Offensive</button>
-                <button id="balanced-btn" class="strategy-btn">Balanced</button>
-                <button id="defensive-btn" class="strategy-btn">Defensive</button>
+            <div id="tactic-details" class="hidden">
+                <p>Team Tactic Details:</p>
+                <p id="tactic-description"></p>
             </div>
-            
-            <br>
-            
-            <label for="num-ai-pieces">Number of AI Team Pieces:</label>
-            <input type="number" id="num-ai-pieces" min="1" max="12" class="narrow-input center-input" maxlength="2"> <!-- Updated min, max, class, and added maxlength -->
-            
-            <button id="name-pieces-btn">Name Your Pieces</button>
-            
-            <div id="piece-names"></div>
 
-            <button id="generate-ai-team">Generate AI Team</button>
-        </section>
-        <section id="game-simulation">
-            <!-- The game simulation and AI decision-making interface will be displayed here -->
-        </section>
-    </main>
+            <label for="opponent-count">Enter Opponent Count (1-12):</label>
+            <input type="number" id="opponent-count" min="1" max="12">
+            <button id="name-opponents-btn" class="hidden">Name Opponents</button>
+        </div>
+
+        <div id="opponents" class="hidden">
+            <!-- Opponent details will be displayed here -->
+        </div>
+
+        <button id="reset-btn" class="hidden">Reset</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
