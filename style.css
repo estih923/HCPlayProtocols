@@ -1,5 +1,5 @@
 /* Reset some default styles */
-body, h1, h2, p, label, select, input {
+body, h1, h2, p, label, select, input, button {
     margin: 0;
     padding: 0;
 }
@@ -28,7 +28,7 @@ h1 {
 label {
     display: block;
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 10px; /* Increased margin */
     color: #ffffff; /* White label text */
 }
 
@@ -47,32 +47,29 @@ select:hover, input[type="number"]:hover {
     background-color: #2c3e50; /* Darker blue on hover */
 }
 
-#ai-team {
-    margin-top: 10px;
+/* Style the strategy buttons */
+.strategy-btn {
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#ai-behavior {
-    background-color: #34495e; /* Slightly lighter blue background for AI behavior */
-    padding: 20px;
-    border-radius: 10px;
+/* Highlighted state for selected button */
+.strategy-btn.selected {
+    background-color: #3498db; /* Highlight color */
 }
 
-pre {
-    font-size: 16px;
-    white-space: pre-wrap;
+.strategy-btn:hover {
+    background-color: #34495e;
 }
 
-/* Style the select dropdown arrow */
-select::-ms-expand {
-    display: none;
-}
-
-/* Style the select dropdown arrow for Chrome */
-select::-webkit-select {
-    appearance: none;
-    background-image: url('dropdown-arrow.png'); /* Add an arrow image here */
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: 16px;
-    padding-right: 30px; /* Space for the arrow */
+/* Added styles for narrower input and centering */
+.narrow-input {
+    width: 10px; /* Narrower input field */
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center horizontally */
 }

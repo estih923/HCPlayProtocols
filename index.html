@@ -13,17 +13,22 @@
     <main>
         <section id="team-setup">
             <h2>Team Setup</h2>
-            <label for="strategy-select">Select Team Strategy:</label>
-            <select id="strategy-select">
-                <option value="offensive">Offensive</option>
-                <option value="balanced">Balanced</option>
-                <option value="defensive">Defensive</option>
-            </select>
-            <label for="num-ai-pieces">Number of AI Team Pieces:</label>
-            <input type="number" id="num-ai-pieces">
-            <div id="piece-inputs">
-                <!-- Dynamic piece input fields will be added here -->
+
+            <div class="strategy-options">
+                <button id="offensive-btn" class="strategy-btn">Offensive</button>
+                <button id="balanced-btn" class="strategy-btn">Balanced</button>
+                <button id="defensive-btn" class="strategy-btn">Defensive</button>
             </div>
+            
+            <br>
+            
+            <label for="num-ai-pieces">Number of AI Team Pieces:</label>
+            <input type="number" id="num-ai-pieces" min="1" max="12" class="narrow-input center-input" maxlength="2"> <!-- Updated min, max, class, and added maxlength -->
+            
+            <button id="name-pieces-btn">Name Your Pieces</button>
+            
+            <div id="piece-names"></div>
+
             <button id="generate-ai-team">Generate AI Team</button>
         </section>
         <section id="game-simulation">
